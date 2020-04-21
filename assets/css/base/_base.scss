@@ -68,12 +68,14 @@ h1,
 	font-size: ms(5);
 	line-height: 1.214;
 	letter-spacing: -1px;
+	text-transform: uppercase;
 }
 
 h2,
 .beta {
 	font-size: 2em;
 	line-height: 1.214;
+	text-transform: uppercase;
 
 	& + h3 {
 		border-top: 1px solid $color_border;
