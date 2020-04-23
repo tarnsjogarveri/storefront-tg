@@ -57,6 +57,8 @@ h6 {
 	font-weight: 300;
 	margin: 0 0 ms(-3);
 	color: darken( $color_body, 20% );
+	
+	font-family: $header-font;
 
 	a {
 		font-weight: 300;
