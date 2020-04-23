@@ -1212,6 +1212,8 @@ button.menu-toggle {
 
 .main-navigation {
 	@include clearfix;
+	
+	text-transform: uppercase;
 
 	div.menu {
 		display: none; // Hide the default menu to stop both it and the handheld menu displaying, when no primary menu has been set...
