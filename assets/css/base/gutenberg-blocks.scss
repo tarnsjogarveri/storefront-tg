@@ -341,6 +341,9 @@
 	// Cover
 	.wp-block-cover {
 		// < 5.2 styling
+		&.has-background-dim::before {
+			opacity: 0.1;
+		}
 		p.wp-block-cover-text {
 			font-size: ms(3);
 			font-weight: 300;
@@ -421,11 +424,15 @@
 				&:not( .has-small-font-size ):not( .has-medium-font-size ):not( .has-large-font-size ):not( .has-huge-font-size ) {
 					font-size: 1.1em;
 				}
+			}
 
+			* {
+				text-shadow:1px 1px 4px #000;
 				&:not( .has-text-color ) {
 					color: #fff;
 				}
 			}
+
 
 			@media ( min-width: $handheld ) {
 				width: calc(8 * (100vw / 12 ));
