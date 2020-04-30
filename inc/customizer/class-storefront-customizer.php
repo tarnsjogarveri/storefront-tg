@@ -30,6 +30,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'customize_register', array( $this, 'edit_default_customizer_settings' ), 99 );
 			add_action( 'enqueue_block_assets', array( $this, 'block_editor_customizer_css' ) );
 			add_action( 'init', array( $this, 'default_theme_mod_values' ), 10 );
+			add_filter('storefront_customizer_css', '__return_false'); //disable inline css
+			add_filter('storefront_customizer_woocommerce_css', '__return_false'); //disable inline css
 		}
 
 		/**
