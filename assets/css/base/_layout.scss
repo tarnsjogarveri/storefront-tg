@@ -597,7 +597,7 @@
 	}
 }
 
-@include susy-media (max-width $container-width) {
+@include susy-media (max-width $desktop) {
 	.col-full {
 		margin-left: ms(5);
 		margin-right: ms(5);
@@ -612,3 +612,12 @@
 		padding: 0;
 	}
 }
+@media only screen and (min-width: 769px) {
+	#kco-order-review,
+	#kco-iframe {
+		width:	100% !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+

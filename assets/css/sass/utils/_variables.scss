@@ -15,8 +15,18 @@ $color_links:       #646464;
 $color_border:      rgba( 0, 0, 0, 0.05 );
 $color_woocommerce: #87ce87;
 $error:             #e2401c;
-$success:           #87ce87;
+$success:           $color_woocommerce;
 $info:              #3d9cd2;
+
+$footer-back:		$body-background;
+$footer-color:		$color_links;//mix( $color_body, #333 );
+
+$button-font:		$header-font;
+$button-back:		$color_links;
+$button-color:		#fff;
+$button_alt-back:	$color_woocommerce;
+$button_alt-color:	$button-color;
+
 
 // layout sizes
 $desktop:           1200px;

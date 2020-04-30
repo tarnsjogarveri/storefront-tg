@@ -292,10 +292,10 @@ body {
  * Header
  */
 .site-header {
-	background-color: #2c2d33;
+	background-color: $body-background;
 	padding-top: ms(3);
 	padding-bottom: ms(3);
-	color: #9aa0a7;
+	color: $color_links;
 	background-position: center center;
 	position: relative;
 	z-index: 999;
@@ -446,8 +446,8 @@ body {
  * Footer
  */
 .site-footer {
-	background-color: #f3f3f3;
-	color: mix( $color_body, #333 );
+	background-color: $footer_back;
+	color: $footer-color;
 	padding: ms(3) 0 ms(6);
 
 	h1,
@@ -862,15 +862,16 @@ input[type='submit'],
 	border: 0;
 	border-radius: 0;
 	background: none;
-	background-color: $color_body;
-	border-color: $color_body;
-	color: #fff;
+	background-color: $button-back;
+	border-color: $button-back;
+	color: $button-color;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	padding: ms(-2) ms(2);
 	text-decoration: none;
 	font-weight: 600;
 	text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
 	display: inline-block;
+	font-family: $button-font;
 	-webkit-appearance: none;
 
 	&::after {
@@ -878,17 +879,19 @@ input[type='submit'],
 	}
 
 	&.cta,
+	&.checkout,
 	&.alt {
-		background-color: $color_links;
-		border-color: $color_links;
+		background-color: $button_alt-back;
+		border-color: $button_alt-back;
+		color: $button_alt-color;
 
 		&:hover {
-			background-color: $color_links;
+			background-color: darken($button_alt-back, 10%);
 		}
 	}
 
 	&:hover {
-		color: #fff;
+		background-color: darken($button-back, 10%);
 	}
 
 	&.loading {
@@ -1305,10 +1308,48 @@ button.menu-toggle {
 			display: block;
 
 			&:hover {
-				color: #e6e6e6;
+				/*background-color: color.darken($body-background, 10%);*/
 			}
 		}
 	}
+}
+.storefront-handheld-footer-bar, .storefront-handheld-footer-bar ul li > a, .storefront-handheld-footer-bar ul li.search .site-search {
+	background-color: $body-background;
+}
+
+.footer-cart-contents .count {
+	background-color: $color_woocommerce;
+	color: $body-background;
+	font-family: $header-font;
+	text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*button.menu-toggle,
+.added_to_cart.alt,
+.added_to_cart,
+.widget a.button.checkout {
+	background-color: $color_woocommerce;
+	color: $body_background;
+	&::hover {
+		background-color: darken($color_woocommerce, 10%);
+	}
+}*/
+
+.sub-menu,
+.site-header-cart .widget_shopping_cart {
+	background-color: lighten($body-background, 20%);
+	box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+@include susy-media($desktop) {
+	.storefront-primary-navigation > .col-full {
+		border-bottom: 3px solid $color_body;
+		padding: 0;
+	}
+}
+.site-footer > .col-full {
+	border-top: 1px solid $color_body;
+	padding: 0;
 }
 
 /**
