@@ -72,3 +72,8 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+add_filter( 'woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder', 10 );
+function custom_woocommerce_placeholder( $image_url ) {
+  return '/wp-content/uploads/2020/04/tg-placeholder.svg'; //custom placeholder
+}
