@@ -475,13 +475,13 @@
 		ul.nav-menu {
 			max-height: none;
 			overflow: visible;
-			margin-left: -1em;
+			margin-left: -0.5em;
 			transition: none;
 
 			> li {
 				// The first level menu item
 				> a {
-					padding: ms(3) 1em;
+					padding: ms(1) 0.5em;
 				}
 
 				&.menu-item-has-children,
