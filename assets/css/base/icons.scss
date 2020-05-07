@@ -919,9 +919,9 @@ a#variations_clear {
 					> a {
 						&::after {
 							// The dropdown indicator
-							@include sf-fa-icon;
-							content: fa-content( $fa-var-angle-down );
-							margin-left: 1em;
+							//@include sf-fa-icon;
+							//content: fa-content( $fa-var-angle-down );
+							//margin-left: 1em;
 						}
 					}
 				}
@@ -939,10 +939,10 @@ a#variations_clear {
 						> a {
 							&::after {
 								// The dropdown indicator
-								@include sf-fa-icon;
-								content: fa-content( $fa-var-angle-right );
-								float: right;
-								line-height: 1.618;
+								//@include sf-fa-icon;
+								//content: fa-content( $fa-var-angle-right );
+								//float: right;
+								//line-height: 1.618;
 							}
 						}
 					}
