@@ -75,5 +75,5 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
 add_filter( 'woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder', 10 );
 function custom_woocommerce_placeholder( $image_url ) {
-  return '/wp-content/uploads/2020/04/tg-placeholder.svg'; //custom placeholder
+  return '/wp-content/themes/tg-storefront/assets/images/tg-placeholder.svg'; //custom placeholder
 }
