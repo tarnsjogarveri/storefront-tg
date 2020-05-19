@@ -31,3 +31,7 @@ config.codekit
 
 # Composer
 /vendor
+
+# git-ftp
+.git-ftp-include
+.git-ftp-ignore
