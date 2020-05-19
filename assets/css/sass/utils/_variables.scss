@@ -33,6 +33,10 @@ $desktop:           1200px;
 $handheld:          568px;
 $container-width:   1140px;/*ms(18);*/
 
+//default margins
+$margin-v:			20px;
+$margin-h:			$margin-v;
+
 // fontawesome
 $fa-font-path:      '../../../assets/fonts';
 
