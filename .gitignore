@@ -1,3 +1,6 @@
+Script to upload to production
+/upload.sh
+
 # Compiled CSS
 *.css
 
