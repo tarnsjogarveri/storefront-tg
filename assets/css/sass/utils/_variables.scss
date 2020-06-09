@@ -11,6 +11,7 @@ $ms-ratio:          1.618;
 // base color scheme
 $body-background:   #fffce7;
 $color_body:        #282926;
+$color_h:			darken( $color_body, 20% );
 $color_links:       #646464;
 $color_border:      rgba( 0, 0, 0, 0.05 );
 $color_woocommerce: #87ce87;
