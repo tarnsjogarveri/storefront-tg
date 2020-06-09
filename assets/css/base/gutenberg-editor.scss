@@ -43,8 +43,9 @@ body {
 }
 
 .editor-post-title__block .editor-post-title__input {
+	color: $color_h;
+	font-family: $header-font;
 	clear: both;
-	font-family: $base-font;
 	font-weight: 300;
 	font-size: ms(5);
 	line-height: 1.214;
