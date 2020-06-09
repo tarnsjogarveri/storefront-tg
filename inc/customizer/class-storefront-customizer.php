@@ -30,8 +30,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'customize_register', array( $this, 'edit_default_customizer_settings' ), 99 );
 			add_action( 'enqueue_block_assets', array( $this, 'block_editor_customizer_css' ) );
 			add_action( 'init', array( $this, 'default_theme_mod_values' ), 10 );
-			add_filter('storefront_customizer_css', '__return_false'); //disable inline css
-			add_filter('storefront_customizer_woocommerce_css', '__return_false'); //disable inline css
+			//add_filter('storefront_customizer_css', '__return_false'); //disable inline css
+			//add_filter('storefront_customizer_woocommerce_css', '__return_false'); //disable inline css
 		}
 
 		/**
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					'storefront_button_alt_background_color' => '#333333',
 					'storefront_button_alt_text_color'   => '#ffffff',
 					'storefront_layout'                  => 'right',
-					'background_color'                   => 'ffffff',
+					'background_color'                   => 'fffce7',
 				)
 			);
 		}
@@ -648,7 +648,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
 			$styles = '
-			.main-navigation ul li a,
+			/*.main-navigation ul li a,
 			.site-title a,
 			ul.menu li a,
 			.site-branding h1 a,
@@ -824,7 +824,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.site-header {
 					border-bottom-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -15 ) . ';
 				}
-			}';
+			}*/';
 
 			return apply_filters( 'storefront_customizer_css', $styles );
 		}
