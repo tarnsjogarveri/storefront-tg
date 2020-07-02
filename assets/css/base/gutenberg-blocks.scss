@@ -483,7 +483,13 @@
 
 			figcaption {
 				font-size: ms(1);
-				padding: ms(4) ms(2) ms(-2);
+				padding: 2px 6px;
+				width: auto;
+				bottom: auto;
+				top: 0;
+				background: transparent;
+				text-shadow:1px 1px 4px #000;
+				
 			}
 		}
 
@@ -496,8 +502,8 @@
 			@for $i from 2 through 8 {
 				&.columns-#{$i} .blocks-gallery-image,
 				&.columns-#{$i} .blocks-gallery-item {
-					margin-right: gutter(12);
-					width: ( 100% - ( gutter(12) * ( $i - 1 ) ) ) / $i;
+					margin-right: 20px;
+					width: calc( ( 100% - ( 20px * ( #{$i} - 1 ) ) ) / #{$i} );
 
 					&:nth-of-type( #{$i}n ) {
 						margin-right: 0;
@@ -654,6 +660,31 @@
 
 					&:not( :last-child ) {
 						margin-right: gutter(9);
+					}
+				}
+			}
+		}
+		&.calling-card {
+			& > .wp-block-column > .wp-block-cover {
+				min-height: 230px;
+				& > .wp-block-cover__inner-container {
+					padding: 0;
+					& > * {
+						text-shadow: none;
+						color: $color_body;
+						text-align: center;
+					}
+					& > a {
+						color: $color_h;
+					}
+					& > h2 {
+						font-size: 18pt;
+					}
+					& > h3 {
+						font-size: 16pt;
+					}
+					& > h4 {
+						font-size: 14pt;
 					}
 				}
 			}
