@@ -1345,7 +1345,7 @@ button.menu-toggle {
 .sub-menu,
 .site-header-cart .widget_shopping_cart {
 	background-color: lighten($body-background, 20%);
-	box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 @include susy-media($desktop) {
