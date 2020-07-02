@@ -674,6 +674,9 @@
 						color: $color_body;
 						text-align: center;
 					}
+					& > p {
+						margin: 0;
+					}
 					& > a {
 						color: $color_h;
 					}
