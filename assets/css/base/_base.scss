@@ -262,13 +262,17 @@ a {
 	text-decoration: none;
 }
 
-a,
-input,
-textarea,
-button {
-	&:focus {
-		outline: 2px solid $color_woocommerce;
-	}
+*:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px $color_woocommerce;
+}
+/*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not( .focus-visible ) {
+	outline: none;
+	box-shadow: none;
 }
 
 // Wait, what..?
