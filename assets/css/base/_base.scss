@@ -1275,6 +1275,7 @@ button.menu-toggle {
 
 					&.toggled-on::after {
 						transform: rotate(180deg);
+						text-shadow: -2px -1px 3px rgba(0, 0, 0, 0.5);
 					}
 				}
 			}
@@ -1300,6 +1301,8 @@ button.menu-toggle {
 		top: 0;
 		right: 0;
 		display: block;
+		background-color: $color_links;
+		border-radius: 1000px;
 	}
 }
 
