@@ -73,7 +73,45 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * https://github.com/woocommerce/theme-customisations
  */
 
+/* Custom code */
+
 add_filter( 'woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder', 10 );
 function custom_woocommerce_placeholder( $image_url ) {
   return '/wp-content/themes/tg-storefront/assets/images/tg-placeholder.svg'; //custom placeholder
 }
+
+function register_extra_menus() {
+	register_nav_menu( 'footer_social_menu', 'Footer social menu');
+	register_nav_menu( 'footer_nav_menu', 'Footer navigation menu');
+}
+add_action( 'after_setup_theme', 'register_extra_menus' );
+
+function show_footer_menus() {
+	wp_nav_menu( array(
+		'theme_location' => 'footer_social_menu',
+		'container' => 'nav',
+		'container_class' => 'social',
+	) );
+	wp_nav_menu( array(
+		'theme_location' => 'footer_nav_menu',
+		'container' => 'nav',
+		'container_class' => 'footer',
+	) );
+}
+add_action( 'storefront_footer', 'show_footer_menus', 15 );
+
+function register_extra_widget_space() {
+	register_sidebar( array(
+		'name' => __( 'Footer single centered', 'storefront' ),
+		'id' => 'footer_center',
+		'class' => 'footer_center',
+	) );
+}
+add_action( 'after_setup_theme', 'register_extra_widget_space' );
+function show_extra_widget_space() {
+	echo('<div class="widgets_footer_center"><ul>');
+	dynamic_sidebar('footer_center');
+	echo('</ul></div>');
+}
+add_action( 'storefront_footer', 'show_extra_widget_space', 12 );
+
