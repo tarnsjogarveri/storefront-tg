@@ -1264,6 +1264,10 @@ button.menu-toggle {
 			li {
 				position: relative;
 
+				.sub-menu {
+					background: transparent;
+					box-shadow: none;
+				}
 				button {
 					&::after {
 						transition: all, ease, 0.9s;
