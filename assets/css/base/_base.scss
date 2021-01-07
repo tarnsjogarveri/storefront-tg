@@ -79,11 +79,6 @@ h2,
 	font-size: ms($h2-ms);
 	line-height: 1.214;
 	text-transform: uppercase;
-
-	& + h3 {
-		border-top: 1px solid $color_border;
-		padding-top: ms(-3);
-	}
 }
 
 h3,
