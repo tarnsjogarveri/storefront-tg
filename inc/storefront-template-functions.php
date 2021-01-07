@@ -136,6 +136,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	function storefront_credit() {
 		$links_output = '';
 
+		//hide credits
 		/*if ( apply_filters( 'storefront_credit_link', true ) ) {
 			if ( storefront_is_woocommerce_activated() ) {
 				$links_output .= '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="noreferrer">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.';
@@ -143,11 +144,11 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 				$links_output .= '<a href="https://woocommerce.com/storefront/" target="_blank" title="' . esc_attr__( 'Storefront -  The perfect platform for your next WooCommerce project.', 'storefront' ) . '" rel="noreferrer">' . esc_html__( 'Built with Storefront', 'storefront' ) . '</a>.';
 			}
 		}*/
-
-		if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
+		// hide pp link
+		/*if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
 			$separator = '<span role="separator" aria-hidden="true"></span>';
 			$links_output = get_the_privacy_policy_link( '', ( ! empty( $links_output ) ? $separator : '' ) ) . $links_output;
-		}
+		}*/
 		
 		$links_output = apply_filters( 'storefront_credit_links_output', $links_output );
 		?>
