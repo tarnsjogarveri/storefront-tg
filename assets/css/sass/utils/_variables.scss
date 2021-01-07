@@ -4,9 +4,20 @@
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
 $base-font:         'Lusitana', 'Times New Roman', Times, serif;
+$base-align:		center;
 $header-font:       'Oswald', sans-serif;
-$ms-base:           1em, 0.875em;
-$ms-ratio:          1.618;
+$header-align:		$base-align;
+$header-weight:		600;
+$ms-base:           1em;
+$ms-ratio:          1.2;
+
+$step-ms:			1;
+$h1-ms:				4;
+$h2-ms:				$h1-ms - $step-ms;
+$h3-ms:				$h2-ms - $step-ms;
+$h4-ms:				$h3-ms - $step-ms;
+$h5-ms:				$h4-ms - $step-ms;
+$h6-ms:				$h5-ms - $step-ms;
 
 // base color scheme
 $body-background:   #fffce7;

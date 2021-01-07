@@ -54,20 +54,21 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 300;
+	font-weight: $header-weight;
 	margin: 0 0 ms(-3);
 	color: $color_h;
+	text-align: $header-align;
 	
 	font-family: $header-font;
 
 	a {
-		font-weight: 300;
+		font-weight: $header-weight;
 	}
 }
 
 h1,
 .alpha {
-	font-size: ms(5);
+	font-size: ms($h1-ms);
 	line-height: 1.214;
 	letter-spacing: -1px;
 	text-transform: uppercase;
@@ -75,7 +76,7 @@ h1,
 
 h2,
 .beta {
-	font-size: ms(4);
+	font-size: ms($h2-ms);
 	line-height: 1.214;
 	text-transform: uppercase;
 
@@ -87,12 +88,19 @@ h2,
 
 h3,
 .gamma {
-	font-size: ms(3);
+	font-size: ms($h3-ms);
 }
 
 h4,
 .delta {
-	font-size: ms(2);
+	font-size: ms($h4-ms);
+}
+h5 {
+	font-size: ms($h5-ms);
+}
+
+h6 {
+	font-size: ms($h6-ms);
 }
 
 .alpha,
