@@ -1679,3 +1679,15 @@ nav {
 		font-size: ms(0);
 	}
 }
+
+klarna-placement[data-key='sidebar-promotion-auto-size'] {
+	width: 120px;
+}
+klarna-placement[data-key='credit-promotion-badge'] iframe {
+	margin-bottom: ms(3);
+}
+
+.wpml-ls-statics-footer {
+	margin-bottom: ms(8) !important;
+}
+
