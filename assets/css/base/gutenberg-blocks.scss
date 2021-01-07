@@ -429,6 +429,9 @@
 				&:not( .has-small-font-size ):not( .has-medium-font-size ):not( .has-large-font-size ):not( .has-huge-font-size ) {
 					font-size: 1.1em;
 				}
+				a {
+					font-style: italic;
+				}
 			}
 			> * {
 				text-shadow:1px 1px 4px #000;
