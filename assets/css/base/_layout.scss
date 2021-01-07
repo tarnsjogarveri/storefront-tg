@@ -480,8 +480,9 @@
 
 			> li {
 				// The first level menu item
+				font-size: ms(0);
 				> a {
-					padding: ms(1) 0.5em;
+					padding: ms(0) 0.5em;
 				}
 
 				&.menu-item-has-children,
@@ -500,7 +501,7 @@
 
 				li {
 					a {
-						padding: ms(-1) ms(2);
+						padding: ms(1) ms(2);
 						font-weight: 400;
 						font-size: ms(-1);
 					}
