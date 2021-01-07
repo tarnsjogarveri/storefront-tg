@@ -1,1 +1,1 @@
-Customized version of storefront for out business.
+Customized version of storefront for our business.
