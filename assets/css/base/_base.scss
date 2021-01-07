@@ -468,7 +468,8 @@ body {
 .site-footer {
 	background-color: $footer_back;
 	color: $footer-color;
-	padding: ms(3) 0 ms(6);
+	padding: ms(3) 0 ms(1);
+	line-height: 1.4;
 
 	h1,
 	h2,
@@ -487,11 +488,15 @@ body {
 			text-decoration: none;
 		}
 	}
+	p {
+		font-size: ms(-1);
+	}
 }
 
 .site-info {
 	padding: ms(5) 0;
 	text-align: center;
+	font-size: ms(-1);
 
 	span[role=separator] {
 		padding: 0 ms(-6) 0 ms(-5);
@@ -1633,9 +1638,14 @@ button.menu-toggle {
 		list-style: none;
 		margin: 0;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		.widget {
+			display: block;
+			text-align: center;
 			margin: 20px;
+			* {
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -1651,7 +1661,6 @@ nav {
 			margin: 0;
 			display: flex;
 			justify-content: center;
-
 			li {
 				margin: 0 10px;
 			}
