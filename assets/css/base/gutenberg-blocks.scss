@@ -785,12 +785,26 @@
 	.wp-block-embed iframe {
 		border-radius: 3px;
 	}
-}
 
-// Top rated products
-.wc-block-grid {
-	img {
-		display: block;
-		margin: 0 auto ms(3);
+	// Top rated products
+	.wc-block-grid {
+		img {
+			display: block;
+			margin: 0 auto ms(3);
+		}
 	}
-}
+	
+	.wc-block-product-categories {
+		&.center {
+			ul {
+				margin: none;
+				text-align: center;
+			}
+		}
+		&.no-marker {
+			ul {
+				list-style: none;
+			}
+		}
+	}
+}	
