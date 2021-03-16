@@ -119,3 +119,40 @@ function enqueue_scripts() {
 	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/assets/js/focus-visible.min.js', '', '', true);
 }
 add_action ('wp_enqueue_scripts', 'enqueue_scripts');
+
+function storefront_cart_link() {
+	?>
+        <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+<svg xmlns="http://www.w3.org/2000/svg" width="34.285" height="56.929" viewBox="0 0 9.071 15.062">
+  <defs>
+    <marker orient="auto" refY="0" refX="0" id="b" overflow="visible">
+      <path d="M1.96 0a2 2 0 11-4.001-.001A2 2 0 011.96 0z" fill-rule="evenodd" stroke="#000" stroke-width=".5332"/>
+    </marker>
+    <marker orient="auto" refY="0" refX="0" id="a" overflow="visible">
+      <path d="M1.96 0a2 2 0 11-4.001-.001A2 2 0 011.96 0z" fill-rule="evenodd" stroke="#000" stroke-width=".5332"/>
+    </marker>
+  </defs>
+  <path fill="none" stroke="#000" stroke-width=".217" d="M.109 4.024h8.854v10.93H.109z"/>
+  <path d="M168.574 134.045s-.26-5.15 2.456-5.15c2.717 0 2.457 5.15 2.457 5.15" fill="none" stroke="#000" stroke-width=".265" marker-start="url(#a)" marker-end="url(#b)" transform="translate(-166.495 -128.763)"/>
+  <text style="line-height:1.25;-inkscape-font-specification:Oswald;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end" x="171.052" y="140.952" font-weight="400" font-size="25.4" font-family="Oswald" letter-spacing="0" word-spacing="0" text-anchor="end" stroke-width=".265" transform="translate(-166.495 -128.763)">
+    <tspan x="171.052" y="140.952" style="-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center" font-size="5.644" font-family="sans-serif" writing-mode="lr" text-anchor="middle"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></tspan>
+  </text>
+</svg>	
+	</a>
+        <?php
+}
+
+/**
+ *  * @snippet       Remove Additional Information Tab @ WooCommerce Single Product Page
+ *   * @how-to        Get CustomizeWoo.com FREE
+ *    * @author        Rodolfo Melogli
+ *     * @testedwith    WooCommerce 3.8
+ *      * @donate $9     https://businessbloomer.com/bloomer-armada/
+ *       */
+  
+add_filter( 'woocommerce_product_tabs', 'bbloomer_remove_product_tabs', 9999 );
+  
+function bbloomer_remove_product_tabs( $tabs ) {
+	    unset( $tabs['additional_information'] ); 
+	        return $tabs;
+}

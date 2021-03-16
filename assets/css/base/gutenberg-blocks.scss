@@ -18,6 +18,7 @@
 /**
  * Front-end only styles
  */
+.page-description, .term-description, 
 .hentry .entry-content {
 	// Global
 	@media ( min-width: $container-width ) {
@@ -71,9 +72,39 @@
 		}
 	}
 	.wp-block-cover {
+		min-height: 666px;
 		p.wp-block-cover-text {
 			color: #fff;
 		}
+	}
+	.wp-block-cover.text {
+		min-height: 430px;
+		background-color: transparent;
+		border-top: 1px solid $color_body;
+		border-bottom: 1px solid $color_body;
+		border-radius: 0;
+		.wp-block-cover__inner-container p {
+			color: $color_body;
+			text-shadow: none;
+
+		}
+	}
+	.wp-block-cover.square {
+		min-height: 0;
+		height: 0;
+		width: 100%;
+		padding-bottom: 100%;
+		margin-bottom: $margin-h;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-description, .term-description {
+	> .wp-block-cover,
+	> .wp-block-image {
+		margin-bottom: ms(7);
 	}
 }
 
@@ -112,6 +143,7 @@
 /**
  * Front-end + editor styles
  */
+.page-description, .term-description,
 .hentry .entry-content,
 .editor-styles-wrapper {
 	// Typography
@@ -163,12 +195,13 @@
 	// Button
 	.wp-block-button {
 		margin-bottom: ms(2);
+		text-align: center;
 
 		.wp-block-button__link {
 			border-radius: 0;
 			font-size: ms(1);
 			line-height: 1.618;
-			border: 0;
+			border: 1px solid white;
 			cursor: pointer;
 			padding: ms(-2) ms(2);
 			text-decoration: none;
@@ -176,6 +209,11 @@
 			text-shadow: none;
 			display: inline-block;
 			-webkit-appearance: none;
+			&:hover,
+			&:active,
+			&:focus {
+				border: 1px solid white;
+			}
 		}
 
 		&.is-style-outline .wp-block-button__link,
@@ -183,7 +221,7 @@
 		&.is-style-outline .wp-block-button__link:active,
 		&.is-style-outline .wp-block-button__link:hover {
 			background: transparent;
-			border: 2px solid currentColor;
+			border: 1px solid white;
 		}
 	}
 

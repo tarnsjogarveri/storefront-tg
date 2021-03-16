@@ -24,9 +24,9 @@
 			clear: both;
 
 			img {
-				height: auto;
-				max-width: 120px;
-				max-height: none;
+				//height: auto;
+				max-width: 180px;
+				//max-height: none;
 			}
 		}
 	}
@@ -34,22 +34,45 @@
 	.woocommerce-active {
 		.site-header {
 			.site-branding {
-				@include span(10 of 12);
+				@include span(all);
 			}
 
 			.site-search {
-				@include span(last 2 of 12);
-				clear: none;
+				//@include span(last 2 of 12);
+				//clear: none;
+				visibility: hidden;
+				width: 0;
+				height: 0;
 			}
 
 			.main-navigation {
-				@include span(9 of 12);
-				clear: both;
+				width: 80%;
+				margin-left: 10%;
+				float: left;
+				text-align: center;
 			}
 
 			.site-header-cart {
-				@include span(last 3 of 12);
-				margin-bottom: 0;
+				width: 10%;
+				float: right;
+
+				& .cart-contents {
+					padding: 0;
+					
+					svg {
+						float: right;
+						padding: 4px;
+					}
+				}
+
+				.widget_shopping_cart_content {
+					background-color: white;
+					width: 500px;
+					overflow: visible;
+					position: absolute;
+					right: 0;
+					border: 1px solid #666;
+				}
 			}
 		}
 	}
@@ -92,7 +115,7 @@
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
-		margin-bottom: ms(2);
+		/*margin-bottom: ms(2);*/
 	}
 
 	.site-header {
@@ -398,6 +421,7 @@
 					> ul {
 						left: 0;
 						display: block;
+						text-transform: none;
 
 						li {
 							> ul {
@@ -475,14 +499,17 @@
 		ul.nav-menu {
 			max-height: none;
 			overflow: visible;
-			margin-left: -0.5em;
-			transition: none;
+			text-transform: uppercase;
+			display: flex;
+			height: 60px;
+			justify-content: center;
+			align-items: flex-end;
 
 			> li {
 				// The first level menu item
-				font-size: ms(0);
+				font-size: ms(-1);
 				> a {
-					padding: ms(0) 0.5em;
+					padding: /*ms(0)*/ 0.5em;
 				}
 
 				&.menu-item-has-children,
@@ -503,7 +530,7 @@
 					a {
 						padding: ms(1) ms(2);
 						font-weight: 400;
-						font-size: ms(-1);
+						font-size: ms(0);
 					}
 
 					&:last-child {
@@ -596,6 +623,14 @@
 			}
 		}
 	}
+}
+
+h1.product_title.entry-title {
+	font-size: ms($h3-ms);
+}
+
+span.woocommerce-Price-amount.amount {
+	font-size: smaller;
 }
 
 @include susy-media (max-width $desktop) {

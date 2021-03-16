@@ -3,13 +3,15 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font:         'Lusitana', 'Times New Roman', Times, serif;
-$base-align:		center;
-$header-font:       'Oswald', sans-serif;
-$header-align:		$base-align;
-$header-weight:		600;
-$ms-base:           1em;
-$ms-ratio:          1.2;
+$base-font:			'Lusitana', 'Times New Roman', Times, serif;
+$base-align:			center;
+$header-font:			'Oswald', sans-serif;
+$header-align:			$base-align;
+$header-weight:			400;
+$ms-base:			1em;
+$ms-ratio:			1.2;
+
+$logo-max-height:		200px;
 
 $step-ms:			1;
 $h1-ms:				4;
@@ -20,12 +22,12 @@ $h5-ms:				$h4-ms - $step-ms;
 $h6-ms:				$h5-ms - $step-ms;
 
 // base color scheme
-$body-background:   #fffce7;
-$color_body:        #282926;
-$color_h:			darken( $color_body, 20% );
-$color_links:       #646464;
+$body-background:   #fff;
+$color_body:        #666;
+$color_h:		darken( $color_body, 20% );
+$color_links:       #333;
 $color_border:      rgba( 0, 0, 0, 0.05 );
-$color_woocommerce: #87ce87;
+$color_woocommerce: $color_body;
 $error:             #e2401c;
 $success:           $color_woocommerce;
 $info:              #3d9cd2;
@@ -39,15 +41,19 @@ $button-color:		#fff;
 $button_alt-back:	$color_woocommerce;
 $button_alt-color:	$button-color;
 
-
 // layout sizes
-$desktop:           1200px;
-$handheld:          600px;
-$container-width:   1140px;/*ms(18);*/
+$desktop:		1200px;
+$handheld:		600px;
+$container-width:	1140px;/*ms(18);*/
+$menu_button_max-width:	120px;
 
 //default margins
-$margin-v:			20px;
-$margin-h:			$margin-v;
+$margin-v:			40px;
+$margin-h:			$margin-v/2;
+
+$cover-height:		666px;
+$text-cover-height:	444px;
+$text-cover-height:	$margin-v/2;
 
 // fontawesome
 $fa-font-path:      '../../../assets/fonts';

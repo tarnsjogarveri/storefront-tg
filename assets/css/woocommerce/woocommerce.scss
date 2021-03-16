@@ -403,6 +403,13 @@ ul.products,
 		position: relative;
 		overflow: hidden;
 
+		.summary {
+			.entry-title,
+			p,
+			h1, h2, h3, h4, h5, h6 {
+				text-align: left;
+			}
+		}
 		.images,
 		.summary,
 		.woocommerce-product-gallery {
@@ -429,8 +436,14 @@ ul.products,
 				text-align: center;
 			}
 
+			figure a {
+				display: block;
+				text-align: center;
+			}
+
 			img {
 				margin: 0;
+				display: inline-block;
 			}
 
 			.flex-viewport {
@@ -578,7 +591,7 @@ ul.products,
 
 		p.price {
 			font-size: ms(2);
-			margin: ms(2) 0;
+			margin: 0;
 		}
 
 		table.variations {
@@ -1770,21 +1783,40 @@ p.stars {
 	overflow: hidden;
 	padding: 1em 0;
 
+
 	ul.tabs {
-		list-style: none;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+
 		margin-left: 0;
 		text-align: left;
 		border-top: 1px solid $color_border;
+		border-bottom: 1px solid $color_border;
 
 		li {
+			list-style: none;
+			padding: 1em 0.5em;
 			display: block;
 			margin: 0;
-			border-bottom: 1px solid $color_border;
+			border-left: 1px solid $color_border;
 			position: relative;
 
+			&:last-child {
+				border-right: 1px solid $color_border;
+			}
+
 			a {
-				padding: 1em 0;
+				//padding: 1em 0;
 				display: block;
+			}
+
+			&.active {
+				
+				&::after {
+					opacity: 0;
+				}
 			}
 		}
 	}
@@ -2145,7 +2177,9 @@ dl.variation {
 
 				&.columns-4 {
 					li.product {
-						@include span(3 of 12);
+						//@include span(3 of 12);
+						width: 24.25%;
+						margin-right: 1%;
 					}
 				}
 
@@ -2244,12 +2278,12 @@ dl.variation {
 			}
 
 			.woocommerce-product-gallery {
-				@include span(4 of 9);
+				@include span(1 of 2);
 				margin-bottom: ms(6);
 			}
 
 			.summary {
-				@include span(last 5 of 9);
+				@include span(last 1 of 2);
 			}
 
 			.woocommerce-tabs {
@@ -2257,6 +2291,7 @@ dl.variation {
 			}
 		}
 	}
+
 
 	#reviews {
 		.comment-form-author,
@@ -2288,7 +2323,7 @@ dl.variation {
 			}
 
 			.woocommerce-product-gallery {
-				@include span(5 of 12);
+				@include span(6 of 12);
 				margin-bottom: ms(6);
 
 				&.woocommerce-product-gallery--columns-2 {
@@ -2341,7 +2376,7 @@ dl.variation {
 			}
 
 			.summary {
-				@include span(last 7 of 12);
+				@include span(last 6 of 12);
 				margin-bottom: ms(6);
 			}
 
@@ -2847,11 +2882,11 @@ dl.variation {
 	.storefront-full-width-content {
 		.woocommerce-tabs {
 			ul.tabs {
-				@include span(4 of 12);
+				width: 100%;
 			}
 
 			.panel {
-				@include span(last 8 of 12);
+				width: 100%;
 				margin-bottom: ms(6);
 			}
 		}
@@ -3015,4 +3050,8 @@ dl.variation {
 			}
 		}
 	}
+}
+
+.add_to_cart_button {
+	visibility: hidden;
 }

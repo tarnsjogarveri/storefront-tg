@@ -1,5 +1,11 @@
-Script to upload to production
+#Script to upload to production
 /upload.sh
+
+#vim temp files
+*.swp
+
+#placeholder-image
+/assets/images/tg-placeholder.svg
 
 # Compiled CSS
 *.css

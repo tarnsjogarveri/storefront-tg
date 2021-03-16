@@ -28,6 +28,7 @@
 body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+
 }
 
 body,
@@ -320,13 +321,13 @@ body {
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
-		display: block;
+		display: inline-block;
 		margin-bottom: 0;
 
-		img {
-			width: 100%;
-			max-width: 120px;
-		}
+		//img {
+		//	width: 100%;
+		//	max-width: 120px;
+		//}
 	}
 
 	.widget {
@@ -362,7 +363,9 @@ body {
 .site-branding {
 	float: left;
 	margin-bottom: 0;
-	width: calc( 100% - 120px );
+	width: calc( 100% - 2 * #{$menu_button_max-width});
+	margin-left: $menu_button_max-width;
+	text-align: center;
 
 	.site-title {
 		font-size: 2em;
@@ -459,6 +462,8 @@ body {
 }
 
 .entry-title {
+	margin-top: 0.5em;
+	margin-bottom: 0;
 	text-align: center;
 }
 
@@ -1184,7 +1189,7 @@ button.menu-toggle {
 	background-image: none;
 	padding: ms(-2) ms(-1) ms(-2) ms(5);
 	font-size: ms(-1);
-	max-width: 120px;
+	max-width: $menu_button_max-width;
 
 	&:hover {
 		background-image: none;
@@ -1378,7 +1383,7 @@ button.menu-toggle {
 
 @include susy-media($desktop) {
 	.storefront-primary-navigation > .col-full {
-		border-bottom: 3px solid $color_body;
+		border-bottom: 1px solid $color_body;
 		padding: 0;
 	}
 }
@@ -1691,3 +1696,55 @@ klarna-placement[data-key='credit-promotion-badge'] iframe {
 	margin-bottom: ms(8) !important;
 }
 
+.woocommerce-mini-cart-item {
+	dl.variation {
+		dt,dd {
+			display: inline-block;
+			margin: 0.5em 0 0;
+		}
+		dt {
+			float: left;
+			clear: left;
+		}
+		dd {
+			float: left;
+			clear: right;
+			margin-left: 1em;
+		}
+		p {
+			margin: 0;
+			text-align: left;
+		}
+	}
+	.quantity {
+		float:left;
+		clear: both;
+	}
+}
+
+.storefront-category-sub {
+	//display: none;
+}
+
+.archive .storefront-category-sub {
+	//display: block;
+	//margin: 10px;
+}
+
+.storefront-category-sub ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+}
+.storefront-category-sub ul li {
+	list-style-type: none;
+	padding: 1em 0.5em;
+	font-size: smaller;
+}
+
+.woocommerce-tabs ul.tabs li.active a,
+[aria-current] {
+	font-weight: 600;
+	color: $color-body;
+}

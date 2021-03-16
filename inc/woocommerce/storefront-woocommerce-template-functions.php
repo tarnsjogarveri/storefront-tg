@@ -903,3 +903,34 @@ if ( ! function_exists( 'storefront_woocommerce_brands_single' ) ) {
 		<?php
 	}
 }
+
+if ( ! function_exists( 'storefront_categroies_sub_menu' ) ) {
+	/**
+	 * Display categories as a menu above content
+	 *
+	 * @param array $args the product section args.
+	 * @return void
+	 */
+	function storefront_categories_sub_menu() {
+		if( is_product_category() | is_shop() | is_product() ) {
+			$args = array(
+				'taxonomy'	=> "product_cat",
+				'hide_empty'	=> "true"
+			);
+			$product_categories = get_terms($args);
+
+			$cat_req = (isset(get_queried_object()->slug)) ? get_queried_object()->slug : "";
+			//echo( $category );
+
+			echo( '<div class="col-full"><nav class="storefront-category-sub"><ul>' );
+			foreach ( $product_categories as $category ) {
+				
+				$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : "";
+				echo( '<li><a ' . $current . 'href="?product_cat=' . $category->slug . '">' . $category->name . '</a>' );
+			}
+			echo( '</ul></nav></div>' );
+			
+			//print_r($product_categories);
+		}
+	}
+}
