@@ -75,17 +75,21 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
 /* Custom code */
 
+/* Custom place holder image*/
 add_filter( 'woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder', 10 );
 function custom_woocommerce_placeholder( $image_url ) {
   return '/wp-content/themes/tg-storefront/assets/images/tg-placeholder.svg'; //custom placeholder
 }
 
+/* Register extra menus */
 function register_extra_menus() {
 	register_nav_menu( 'footer_social_menu', 'Footer social menu');
 	register_nav_menu( 'footer_nav_menu', 'Footer navigation menu');
+	register_nav_menu( 'header_top_menu', 'Header top menu');
 }
 add_action( 'after_setup_theme', 'register_extra_menus' );
 
+/* Show footer menus */
 function show_footer_menus() {
 	wp_nav_menu( array(
 		'theme_location' => 'footer_social_menu',
@@ -100,20 +104,45 @@ function show_footer_menus() {
 }
 add_action( 'storefront_footer', 'show_footer_menus', 15 );
 
+function show_header_top_menu() {
+	wp_nav_menu( array(
+		'theme_location' => 'header_top_menu',
+		'container' => 'nav',
+		'container_class' => 'nav',
+	) );
+}
+add_action( 'storefront_header', 'show_header_top_menu', 5 );
+
+/* Register extra widget spaces */
 function register_extra_widget_space() {
 	register_sidebar( array(
 		'name' => __( 'Footer single centered', 'storefront' ),
 		'id' => 'footer_center',
 		'class' => 'footer_center',
 	) );
+	register_sidebar( array(
+		'name' => __( 'Before header', 'storefront' ),
+		'id' => 'widgets_before_header',
+		'class' => 'widgets_before_header',
+	) );
 }
 add_action( 'after_setup_theme', 'register_extra_widget_space' );
-function show_extra_widget_space() {
+
+/* Show footer widget space */
+function show_extra_widget_space_footer() {
 	echo('<div class="widgets_footer_center"><ul>');
 	dynamic_sidebar('footer_center');
 	echo('</ul></div>');
 }
-add_action( 'storefront_footer', 'show_extra_widget_space', 12 );
+add_action( 'storefront_footer', 'show_extra_widget_space_footer', 12 );
+
+/* Show page top widget space */
+function widgets_before_header() {
+	echo('<div class="widgets_before_header"><ul>');
+	dynamic_sidebar('widgets_before_header');
+	echo('</ul></div>');
+}
+add_action( 'storefront_before_header', 'widgets_before_header', 1 );
 
 function enqueue_scripts() {
 	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/assets/js/focus-visible.min.js', '', '', true);
