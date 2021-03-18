@@ -108,7 +108,7 @@ function show_header_top_menu() {
 	wp_nav_menu( array(
 		'theme_location' => 'header_top_menu',
 		'container' => 'nav',
-		'container_class' => 'nav',
+		'container_class' => 'header_top',
 	) );
 }
 add_action( 'storefront_header', 'show_header_top_menu', 5 );
