@@ -920,13 +920,14 @@ if ( ! function_exists( 'storefront_categroies_sub_menu' ) ) {
 			$product_categories = get_terms($args);
 
 			$cat_req = (isset(get_queried_object()->slug)) ? get_queried_object()->slug : "";
-			//echo( $category );
 
 			echo( '<div class="col-full"><nav class="storefront-category-sub"><ul>' );
 			foreach ( $product_categories as $category ) {
+				//print_r( $category );
 				
-				$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : "";
-				echo( '<li><a ' . $current . 'href="?product_cat=' . $category->slug . '">' . $category->name . '</a>' );
+				$url = get_term_link( (int)$category->term_id, "product_cat" ); /*Get url from numeric page id*/
+				$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : ""; /*Set if the current vategory is selected, else blank*/
+				echo( '<li><a ' . $current . 'href="'. $url . '">' . $category->name . '</a>' );
 			}
 			echo( '</ul></nav></div>' );
 			
