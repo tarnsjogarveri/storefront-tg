@@ -146,6 +146,19 @@
 		box-sizing: content-box;
 	}
 
+	.wp-block-tg-blocks-background {
+		padding-top: $margin-v;
+		padding-bottom: $margin-v;
+	}
+
+	.wp-block-tg-blocks-background + * {
+		padding-top: $margin-v;
+	}
+
+	* + .wp-block-tg-blocks-background {
+		padding-bottom: $margin-v;
+	}
+
 	.site-content {
 		@include clearfix;
 	}
