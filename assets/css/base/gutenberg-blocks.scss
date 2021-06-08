@@ -789,7 +789,8 @@
 	}
 	// Media & Text block
 	.wp-block-media-text {
-		margin: $margin-v 0;
+		margin-top: $margin-v;
+		margin-bottom: $margin-v;
 		min-height: 360px;
 		@media ( min-width: $handheld ) {
 			&.has-media-on-the-right .wp-block-media-text__media,
