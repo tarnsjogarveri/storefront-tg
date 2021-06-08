@@ -22,12 +22,15 @@ $h5-ms:				$h4-ms - $step-ms;
 $h6-ms:				$h5-ms - $step-ms;
 
 // base color scheme
-$body-background:   #fff;
-$color_body:        #666;
-$color_h:		darken( $color_body, 20% );
-$color_links:       #333;
-$color_border:      rgba( 0, 0, 0, 0.05 );
-$color_woocommerce: $color_body;
+//$body-background:   #f7f5f3;
+$body-background:   #f9f5f1;
+$background-dark:	#f3ebe2;
+$background-light:	#fff;
+$color_body:        #2b1f12;
+$color_h:		lighten( $color_body, 10% );
+$color_links:       #563d25;
+$color_border:      rgba(5, 5, 5, 0.05);
+$color_woocommerce: #9d6f43;
 $error:             #e2401c;
 $success:           $color_woocommerce;
 $info:              #3d9cd2;
