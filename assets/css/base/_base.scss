@@ -1766,3 +1766,25 @@ klarna-placement[data-key='credit-promotion-badge'] iframe {
 	font-weight: 600;
 	color: $color-body;
 }
+
+//custom color palette
+$colors: (
+	'back-normal': $body-background,
+	'back-dark': $background-dark,
+	'back-light': $background-light,
+	'text-normal': $color-body,
+	'text-header': $color-h,
+	'text-links': $color-links,
+	'accent-woocommerce': $color-woocommerce,
+	'accent-error': $error,
+	'accent-info': $info
+);
+
+@each $name, $color in $colors {
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+	.has-#{$name}-color {
+		color: $color;
+	}
+}

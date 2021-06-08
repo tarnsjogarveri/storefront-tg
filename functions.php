@@ -185,3 +185,58 @@ function bbloomer_remove_product_tabs( $tabs ) {
 	    unset( $tabs['additional_information'] ); 
 	        return $tabs;
 }
+
+
+//Custom colors in block editor
+function tg_gutenberg_color_palette() {
+	add_theme_support(
+		'editor-color-palette', array(
+			array(
+				'name' => 'Normal Background',
+				'slug' => 'back-normal',
+				'color' => '#f9f5f1'
+			),
+			array(
+				'name' => 'Dark Background',
+				'slug' => 'back-dark',
+				'color' => '#f3ebe2'
+			),
+			array(
+				'name' => 'Light Background',
+				'slug' => 'back-light',
+				'color' => '#fff'
+			),
+			array(
+				'name' => 'Normal Text',
+				'slug' => 'text-normal',
+				'color' => '#2b1f12'
+			),
+			array(
+				'name' => 'Header Text',
+				'slug' => 'text-header',
+				'color' => '#4f3921'
+			),
+			array(
+				'name' => 'Link Text',
+				'slug' => 'text-link',
+				'color' => '#563d25'
+			),
+			array(
+				'name' => 'Accent WooCommerce',
+				'slug' => 'accent-woocommerce',
+				'color' => '#9d6f43'
+			),
+			array(
+				'name' => 'Accent Error',
+				'slug' => 'accent-error',
+				'color' => '#e2401c'
+			),
+			array(
+				'name' => 'Accent Info',
+				'slug' => 'accent-info',
+				'color' => '#3d9cd2'
+			),
+		)
+		);
+}
+add_action( 'after_setup_theme', 'tg_gutenberg_color_palette');
