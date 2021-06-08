@@ -139,10 +139,12 @@
 		}
 	}
 
-	.col-full {
+	.col-full .entry-content > *:not( .fill, .wp-block-tg-blocks-background ),
+	.wp-block-tg-blocks-background *:not( .fill, .wp-block-tg-blocks-background ) {
 		@include clearfix;
 		@include container($container-width);
-		padding: 0 ms(5);
+		padding-left: ms(5);
+		padding-right: ms(5);
 		box-sizing: content-box;
 	}
 
