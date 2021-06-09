@@ -139,8 +139,8 @@
 		}
 	}
 
-	.col-full .entry-content > *:not( .fill, .wp-block-tg-blocks-background ),
-	.wp-block-tg-blocks-background *:not( .fill, .wp-block-tg-blocks-background ) {
+	.col-full .entry-content > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
+	.wp-block-tg-blocks-background *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
 		@include clearfix;
 		@include container($container-width);
 		padding-left: ms(5);
