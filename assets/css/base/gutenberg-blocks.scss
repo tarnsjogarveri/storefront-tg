@@ -229,7 +229,7 @@
 	.wp-block-archives,
 	.wp-block-categories,
 	.wp-block-latest-posts {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 		list-style: none;
 	}
 
@@ -301,7 +301,7 @@
 
 	// Pullquote
 	.wp-block-pullquote {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 
 		blockquote {
 			border: 0;
@@ -317,12 +317,12 @@
 
 	// Blockquote
 	.wp-block-quote {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 		padding: 0 0 0 1em;
 
 		&.is-large,
 		&.is-style-large {
-			margin: 0 0 ms(2);
+			margin-bottom: $margin-v;
 			padding: 0;
 			border: 0;
 
@@ -377,7 +377,7 @@
 	}
 
 	figure.wp-block-image {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 	}
 
 	// Cover
@@ -510,7 +510,7 @@
 
 	// Galleries
 	.wp-block-gallery {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 
 		.blocks-gallery-image,
 		.blocks-gallery-item {
@@ -743,7 +743,7 @@
 
 	// Latest Comments
 	.wp-block-latest-comments {
-		margin: 0 0 ms(2);
+		margin-bottom: $margin-v;
 
 		&__comment-avatar {
 			margin-top: ms(-4);
