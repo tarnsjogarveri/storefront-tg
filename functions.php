@@ -142,7 +142,7 @@ function widgets_before_header() {
 	dynamic_sidebar('widgets_before_header');
 	echo('</ul></div>');
 }
-add_action( 'storefront_before_header', 'widgets_before_header', 1 );
+//add_action( 'storefront_before_header', 'widgets_before_header', 1 );
 
 function enqueue_scripts() {
 	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/assets/js/focus-visible.min.js', '', '', true);
