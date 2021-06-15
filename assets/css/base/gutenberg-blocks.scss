@@ -846,4 +846,19 @@
 			}
 		}
 	}
+
+	//Background color
+	.wp-block-tg-blocks-background {
+		padding-top: $margin-v;
+		padding-bottom: $margin-v;
+	}
+	.wp-block-tg-blocks-background + *:not( .wp-block-tg-blocks-background ) {
+		margin-top: $margin-v;
+	}
+
+	//Use entire width of page-block
+	
+	& > .wp-block-tg-blocks-fill {
+		margin-bottom: $margin-v;
+	}
 }	

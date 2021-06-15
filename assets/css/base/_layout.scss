@@ -25,11 +25,17 @@
 			clear: both;
 
 			img {
-				//height: auto;
 				max-width: 180px;
-				//max-height: none;
 			}
 		}
+	}
+
+	.site-header {
+		margin-bottom: 0 !important;
+	}
+	
+	.site-header + .site-content .entry-content > *:first-child:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
+		margin-top:	$margin-v;
 	}
 
 	.woocommerce-active {
@@ -141,25 +147,12 @@
 	}
 
 	.col-full .entry-content > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
-	.wp-block-tg-blocks-background *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
+	.wp-block-tg-blocks-background > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
 		@include clearfix;
 		@include container($container-width);
 		padding-left: ms(5);
 		padding-right: ms(5);
 		box-sizing: content-box;
-	}
-
-	.wp-block-tg-blocks-background {
-		padding-top: $margin-v;
-		padding-bottom: $margin-v;
-	}
-
-	.wp-block-tg-blocks-background + * {
-		padding-top: $margin-v;
-	}
-
-	* + .wp-block-tg-blocks-background {
-		padding-bottom: $margin-v;
 	}
 
 	.site-content {
