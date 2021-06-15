@@ -855,9 +855,19 @@
 		margin-top: $margin-v;
 	}
 
+	.wp-block-tg-blocks-background :first-child {
+		margin-top: 0;
+	}
+	.wp-block-tg-blocks-background :last-child {
+		margin-bottom: 0;
+	}
+
 	//Use entire width of page-block
 	
 	& > .wp-block-tg-blocks-fill {
 		margin-bottom: $margin-v;
+		&:first-child {
+			margin-bottom: 0;
+		}
 	}
 }	
