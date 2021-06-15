@@ -15,8 +15,9 @@
 	}
 
 	.site-header {
-		padding-top: ms(5);
+		padding-top: $margin-v;
 		padding-bottom: 0;
+		border-bottom: 1px solid $color_body;
 
 		.site-branding {
 			display: block;

@@ -316,18 +316,12 @@ body {
 	background-position: center center;
 	position: relative;
 	z-index: 999;
-	border-bottom: 1px solid transparent;
 
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
 		display: inline-block;
 		margin-bottom: 0;
-
-		//img {
-		//	width: 100%;
-		//	max-width: 120px;
-		//}
 	}
 
 	.widget {
@@ -1381,12 +1375,6 @@ button.menu-toggle {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-@include susy-media($desktop) {
-	.storefront-primary-navigation > .col-full {
-		border-bottom: 1px solid $color_body;
-		padding: 0;
-	}
-}
 .site-footer > .col-full {
 	border-top: 1px solid $color_body;
 	padding: 0;
@@ -1677,6 +1665,8 @@ nav {
 	}
 
 	&.header_top {
+		display: inline-block;
+		margin-left: $margin-h;
 		ul {
 			justify-content: left;
 			li {
