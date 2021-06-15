@@ -379,7 +379,7 @@
 
 	// Cover
 	.wp-block-cover {
-		border-radius: 3px;
+		border-radius: $corner-radius;
 		// < 5.2 styling
 		&.has-background-dim::before {
 			opacity: 0;
@@ -802,8 +802,9 @@
 				margin-bottom: 0;
 			}
 		}
-		.wp-block-media-text__media {
-			border-radius: 3px;
+		.wp-block-media-text__media,
+		.wp-block-cover__video-background {
+			border-radius: $corner-radius;
 			min-height: 50vh;
 		}
 		.wp-block-media-text__content {
@@ -820,7 +821,7 @@
 	}
 	// Embed
 	.wp-block-embed iframe {
-		border-radius: 3px;
+		border-radius: $corner-radius;
 	}
 
 	// Top rated products
