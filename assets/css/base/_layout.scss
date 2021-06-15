@@ -33,7 +33,7 @@
 	.site-header {
 		margin-bottom: 0 !important;
 	}
-	
+
 	.site-header + .site-content .entry-content > *:first-child:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
 		margin-top:	$margin-v;
 	}
@@ -116,14 +116,14 @@
 		}
 	}
 
-	.site-branding,
+	/*.site-branding,
 	.site-search,
 	.site-header-cart,
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
-		/*margin-bottom: ms(2);*/
-	}
+		margin-bottom: ms(2);
+	}*/
 
 	.site-header {
 		.subscribe-and-connect-connect {

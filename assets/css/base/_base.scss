@@ -1341,9 +1341,9 @@ button.menu-toggle {
 			padding: ms(-1) 0;
 			display: block;
 
-			&:hover {
-				/*background-color: color.darken($body-background, 10%);*/
-			}
+			/*&:hover {
+				background-color: color.darken($body-background, 10%);
+			}*/
 		}
 	}
 }
@@ -1725,14 +1725,14 @@ klarna-placement[data-key='credit-promotion-badge'] iframe {
 	}
 }
 
-.storefront-category-sub {
+/*.storefront-category-sub {
 	//display: none;
 }
 
 .archive .storefront-category-sub {
 	//display: block;
 	//margin: 10px;
-}
+}*/
 
 .storefront-category-sub ul {
 	display: flex;
