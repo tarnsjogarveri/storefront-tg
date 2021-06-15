@@ -3052,6 +3052,10 @@ dl.variation {
 	}
 }
 
+.button.product_type_variable,
 .add_to_cart_button {
 	visibility: hidden;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
