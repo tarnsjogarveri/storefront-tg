@@ -207,6 +207,14 @@
 			@include span(full);
 		}
 	}
+	/*
+	 * Footer
+	 */
+	.site-footer {
+		.col-full {
+			@include container($container-width);
+		}
+	}
 
 	/**
 	 * Footer widgets
