@@ -675,7 +675,7 @@
 			}
 		}
 
-		@media (min-width:782px) {
+		@media (min-width:$desktop) {
 			@for $i from 2 through 6 {
 				&.has-#{$i}-columns {
 					.wp-block-column {
