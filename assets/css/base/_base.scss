@@ -467,7 +467,6 @@ body {
 .site-footer {
 	background-color: $footer_back;
 	color: $footer-color;
-	padding: ms(3) 0 ms(1);
 	line-height: 1.4;
 
 	h1,
@@ -1375,9 +1374,8 @@ button.menu-toggle {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.site-footer > .col-full {
-	border-top: 1px solid $color_body;
-	padding: 0;
+.site-footer {
+	border-top: $line-footer;
 }
 
 /**
