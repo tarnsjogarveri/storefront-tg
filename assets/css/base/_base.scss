@@ -1782,3 +1782,9 @@ $colors: (
 		color: $color;
 	}
 }
+
+.storefront-category-sub,
+.woocommerce-page .site-content {
+	background-color: $background-light;
+}
+
