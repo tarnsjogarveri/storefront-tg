@@ -221,7 +221,7 @@
 	 */
 	.footer-widgets {
 		@include clearfix;
-		padding-top: ms(7);
+		padding-top: $margin-v;
 		border-bottom: 1px solid rgba( 0, 0, 0, 0.05 );
 
 		&.col-2 {
