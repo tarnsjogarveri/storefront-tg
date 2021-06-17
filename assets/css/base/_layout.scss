@@ -147,12 +147,10 @@
 	}
 
 	.col-full .entry-content > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
+	.woocommerce-page .col-full .site-main > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
 	.wp-block-tg-blocks-background > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
 		@include clearfix;
 		@include container($container-width);
-		padding-left: ms(5);
-		padding-right: ms(5);
-		box-sizing: content-box;
 	}
 
 	.site-content {
