@@ -1788,3 +1788,10 @@ $colors: (
 	background-color: $background-light;
 }
 
+.stock.in-stock::before {
+	content: none !important;
+}
+  
+.stock.out-of-stock::before {
+	content: none !important;
+}
