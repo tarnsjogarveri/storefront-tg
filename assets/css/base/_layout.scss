@@ -17,7 +17,10 @@
 	.site-header {
 		padding-top: $margin-v;
 		padding-bottom: 0;
+		padding-left: $margin-h;
+		padding-right: $margin-h;
 		border-bottom: $line-header;
+		margin-bottom: 0 !important;
 
 		.site-branding {
 			display: block;
@@ -30,38 +33,37 @@
 		}
 	}
 
-	.site-header {
-		margin-bottom: 0 !important;
-	}
-
 	.site-header + .site-content .entry-content > *:first-child:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
 		margin-top:	$margin-v;
 	}
 
 	.woocommerce-active {
 		.site-header {
+			.header_top {
+				@include span(first 3 of 12);
+				margin-left: 0;
+			}
+
 			.site-branding {
-				@include span(all);
+				@include span(6 of 12);
+				clear: none;
 			}
 
 			.site-search {
-				//@include span(last 2 of 12);
-				//clear: none;
-				visibility: hidden;
-				width: 0;
-				height: 0;
+				@include span(2 of 12);
+				clear: none;
 			}
 
 			.main-navigation {
-				width: 80%;
-				margin-left: 10%;
-				float: left;
+				width: 100%;
+				max-width: $container-width;
+				margin-left: auto;
+				margin-right: auto;
 				text-align: center;
 			}
 
 			.site-header-cart {
-				width: 10%;
-				float: right;
+				@include span(last 1 of 12);
 
 				& .cart-contents {
 					padding: 0;
