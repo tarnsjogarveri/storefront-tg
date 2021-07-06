@@ -171,6 +171,12 @@ function storefront_cart_link() {
         <?php
 }
 
+/* Move search and cart */
+remove_action( 'storefront_header', 'storefront_product_search', 40 );
+remove_action( 'storefront_header', 'storefront_header_cart', 60 );
+add_action( 'storefront_header', 'storefront_product_search', 25 );
+add_action( 'storefront_header', 'storefront_header_cart', 26 );
+
 /**
  *  * @snippet       Remove Additional Information Tab @ WooCommerce Single Product Page
  *   * @how-to        Get CustomizeWoo.com FREE
