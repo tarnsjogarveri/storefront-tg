@@ -519,7 +519,7 @@
 			text-transform: uppercase;
 			display: flex;
 			height: 60px;
-			justify-content: center;
+			justify-content: space-around;
 			align-items: flex-end;
 
 			> li {
@@ -527,6 +527,7 @@
 				font-size: ms(-1);
 				> a {
 					padding: /*ms(0)*/ 0.5em;
+					letter-spacing: 0.2em;
 				}
 
 				&.menu-item-has-children,
