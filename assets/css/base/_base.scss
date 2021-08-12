@@ -1784,8 +1784,9 @@ $colors: (
 }
 
 .storefront-category-sub,
-.woocommerce-page .site-content {
-	background-color: $background-light;
+.woocommerce-page .site-content,
+.woocommerce-page .site-header {
+	background-color: $background-shop;
 }
 
 .stock.in-stock::before {
