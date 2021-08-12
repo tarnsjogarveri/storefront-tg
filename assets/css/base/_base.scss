@@ -1795,3 +1795,7 @@ $colors: (
 .stock.out-of-stock::before {
 	content: none !important;
 }
+
+.wp-block-buttons {
+	justify-content: center;
+}
