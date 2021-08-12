@@ -519,15 +519,15 @@
 			text-transform: uppercase;
 			display: flex;
 			height: 60px;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: flex-end;
 
 			> li {
 				// The first level menu item
-				font-size: ms(-1);
+				font-size: ms(0);
 				> a {
-					padding: /*ms(0)*/ 0.5em;
-					letter-spacing: 0.2em;
+					padding: 0.5em 0;
+					letter-spacing: 0.3em;
 				}
 
 				&.menu-item-has-children,
