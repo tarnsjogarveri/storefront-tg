@@ -145,7 +145,7 @@ function widgets_before_header() {
 //add_action( 'storefront_before_header', 'widgets_before_header', 1 );
 
 function enqueue_scripts() {
-	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/assets/js/focus-visible.min.js', '', '', true);
+	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/node_modules/focus-visible/dist/focus-visible.min.js', '', '', true);
 }
 add_action ('wp_enqueue_scripts', 'enqueue_scripts');
 
