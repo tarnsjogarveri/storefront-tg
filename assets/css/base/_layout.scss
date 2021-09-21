@@ -148,9 +148,10 @@
 		}
 	}
 
-	.col-full .entry-content > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
-	.woocommerce-page .col-full .site-main > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ),
-	.wp-block-tg-blocks-background > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background ) {
+	.col-full .entry-content > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background, .woocommerce-products-header ),
+	.woocommerce-page .col-full .site-main > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background, .woocommerce-products-header ),
+	.page-description > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background, .woocommerce-products-header ),
+	.wp-block-tg-blocks-background > *:not( .wp-block-tg-blocks-fill, .wp-block-tg-blocks-background, .woocommerce-products-header ) {
 		@include clearfix;
 		@include container($container-width);
 	}
