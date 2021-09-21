@@ -1800,3 +1800,8 @@ $colors: (
 .wp-block-buttons {
 	justify-content: center;
 }
+
+.woocommerce ul.products li.product {
+	width: 49%;
+	float: left;
+}
