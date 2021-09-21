@@ -5,9 +5,10 @@
 
 $base-font:			'Lusitana', 'Times New Roman', Times, serif;
 $base-align:			center;
-$header-font:			'Oswald', sans-serif;
+$header-font:			'Libre Franklin', sans-serif;
 $header-align:			$base-align;
-$header-weight:			400;
+$header-weight:			300;
+$link-block-title-font:			'Bodoni Moda', 'Times New Roman', Times, serif;
 $ms-base:			1em;
 $ms-ratio:			1.2;
 
@@ -29,7 +30,7 @@ $color_body:        #2b1f12;
 $color_h:			lighten( $color_body, 10% );
 $color_links:       #563d25;
 $color_border:      rgba(5, 5, 5, 0.05);
-$color_woocommerce: #9d6f43;
+$color_woocommerce: #78614f;
 $error:             #e2401c;
 $success:           $color_woocommerce;
 $info:              #3d9cd2;
