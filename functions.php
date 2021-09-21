@@ -208,8 +208,8 @@ function tg_gutenberg_color_palette() {
 				'color' => '#f3ebe2'
 			),
 			array(
-				'name' => 'Light Background',
-				'slug' => 'back-light',
+				'name' => 'White',
+				'slug' => 'white',
 				'color' => '#fff'
 			),
 			array(
@@ -242,6 +242,11 @@ function tg_gutenberg_color_palette() {
 				'slug' => 'accent-info',
 				'color' => '#3d9cd2'
 			),
+			array(
+				'name' => 'Link Block',
+				'slug' => 'link-block',
+				'color' => '#78614f'
+			)
 		)
 		);
 }
