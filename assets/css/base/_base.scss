@@ -268,7 +268,7 @@ a {
 
 *:focus {
 	outline: none;
-	box-shadow: 0 0 0 2px $color_woocommerce;
+	box-shadow: none;
 }
 /*
   This will hide the focus indicator if the element receives focus via the mouse,
