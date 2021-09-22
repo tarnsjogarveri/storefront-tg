@@ -658,6 +658,15 @@ span.woocommerce-Price-amount.amount {
 		margin-right: ms(5);
 		padding: 0;
 	}
+	#content>.col-full {
+		margin-left: 0;
+		margin-right: 0;
+
+		h1, h2, h3, h4, h5, 
+		p {
+			padding: 0 ms(2);
+		}
+	}
 }
 
 @include susy-media (max-width $handheld) {
@@ -667,6 +676,7 @@ span.woocommerce-Price-amount.amount {
 		padding: 0;
 	}
 }
+
 @media only screen and (min-width: 769px) {
 	#kco-order-review,
 	#kco-iframe {
