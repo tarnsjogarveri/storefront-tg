@@ -1818,18 +1818,13 @@ $colors: (
 
 	.tg-blocks-link__text {
 		.intro {
-			text-transform: uppercase;
 			font-family: $header-font;
-			font-size: 19px;
 		}
 		.title {
-			text-transform: uppercase;
 			font-family: $link-block-title-font;
-			font-size: 57px;
-			letter-spacing: 10px;
 		}
 		.description {
-			font-size: 23px;
+			font-family: $base-font;
 		}
 	}
 
