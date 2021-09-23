@@ -1729,25 +1729,21 @@ klarna-placement[data-key='credit-promotion-badge'] iframe {
 	}
 }
 
-/*.storefront-category-sub {
-	//display: none;
-}
+.storefront-category-sub {
+	ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0;
 
-.archive .storefront-category-sub {
-	//display: block;
-	//margin: 10px;
-}*/
-
-.storefront-category-sub ul {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin: 0;
-}
-.storefront-category-sub ul li {
-	list-style-type: none;
-	padding: 1em 0.5em;
-	font-size: smaller;
+		li {
+			list-style-type: none;
+			padding: 0.5em 1em;
+			font-size: smaller;
+			text-transform: uppercase;
+			letter-spacing: 0.3em;
+		}
+	}
 }
 
 .woocommerce-products-header__title {
@@ -1783,10 +1779,17 @@ $colors: (
 	}
 }
 
-.storefront-category-sub,
 .woocommerce-page .site-content,
 .woocommerce-page .site-header {
 	background-color: $background-shop;
+	border-bottom: none;
+}
+.woocommerce-page #page,
+.storefront-category-sub {
+	background-color: $background-dark;
+}
+.woocommerce-page .site-header {
+	padding-bottom: 2em;
 }
 
 .stock.in-stock::before {
