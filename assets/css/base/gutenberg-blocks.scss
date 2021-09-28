@@ -96,6 +96,13 @@
 			margin-bottom: 0;
 		}
 	}
+	
+	.wp-block-cover.video {
+		@include susy-media (max-width $handheld) {
+			height: 100vw;
+			min-height: auto;
+		}
+	}
 }
 
 .page-description, .term-description {
