@@ -689,3 +689,22 @@ span.woocommerce-Price-amount.amount {
 	}
 }
 
+
+@media (max-width: 480px){
+	.wc-block-grid {
+		&.has-3-columns,
+		&.has-4-columns,
+		&.has-5-columns,
+		&.has-6-columns {
+			.wc-block-grid__products {
+				display: flex;
+
+				.wc-block-grid__product{
+					flex: 1 0 50%;
+					max-width: 50%;
+					border-left: none;
+				}
+			}
+		}
+	}
+}
