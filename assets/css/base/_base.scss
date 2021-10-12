@@ -1841,6 +1841,10 @@ $colors: (
 	text-transform: uppercase;
 }
 
+.col-full .footer-widgets {
+	padding-top: 20px !important;
+}
+
 @include susy-media (max-width $handheld) {
 	.no-mobile {
 		visibility: hidden !important;
