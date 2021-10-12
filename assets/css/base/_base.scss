@@ -1834,6 +1834,13 @@ $colors: (
 
 }
 
+.linkblock-title {
+	font-family: $link-block-title-font;
+	font-size: 40px !important;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
 @include susy-media (max-width $handheld) {
 	.no-mobile {
 		visibility: hidden !important;
