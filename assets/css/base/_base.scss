@@ -1860,3 +1860,9 @@ $colors: (
 		margin: 0 !important;
 	}
 }
+
+.single-product {
+	div.product {
+		margin-top: $margin-h;
+	}
+}
