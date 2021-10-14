@@ -1839,6 +1839,10 @@ $colors: (
 	font-size: 40px !important;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+
+	@include susy-media (max-width $handheld) {
+		font-size: 20px !important;
+	}
 }
 
 .col-full .footer-widgets {
