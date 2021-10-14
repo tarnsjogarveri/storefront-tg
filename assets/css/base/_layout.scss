@@ -693,7 +693,7 @@ span.woocommerce-Price-amount.amount {
 }
 
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 	.wc-block-grid {
 		&.has-3-columns,
 		&.has-4-columns,
@@ -702,7 +702,7 @@ span.woocommerce-Price-amount.amount {
 			.wc-block-grid__products {
 				display: flex;
 
-				.wc-block-grid__product{
+				.wc-block-grid__product {
 					flex: 1 0 50%;
 					max-width: 50%;
 					border-left: none;
@@ -712,8 +712,7 @@ span.woocommerce-Price-amount.amount {
 	}
 }
 
-.col-full
-{
+.col-full {
 	.footer-widgets,
 	.product {
 		padding: 0 1em;
