@@ -1,8 +1,8 @@
 {
-  "name": "storefront",
-  "title": "Storefront",
-  "version": "2.5.5",
-  "homepage": "http://woocommerce.com/storefront/",
+  "name": "tg-storefront",
+  "title": "TG Storefront",
+  "version": "1.0.0",
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/woothemes/storefront.git"
@@ -42,7 +42,5 @@
     "node": ">=0.8.0",
     "npm": ">=1.1.0"
   },
-  "dependencies": {
-    "focus-visible": "^5.1.0"
-  }
+  "dependencies": {}
 }
