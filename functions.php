@@ -144,10 +144,10 @@ function widgets_before_header() {
 }
 //add_action( 'storefront_before_header', 'widgets_before_header', 1 );
 
-function enqueue_scripts() {
+/*function enqueue_scripts() {
 	wp_enqueue_script( 'focus-visible', get_template_directory_uri() . '/node_modules/focus-visible/dist/focus-visible.min.js', '', '', true);
 }
-add_action ('wp_enqueue_scripts', 'enqueue_scripts');
+add_action ('wp_enqueue_scripts', 'enqueue_scripts');*/
 
 function storefront_cart_link() {
 	?>
