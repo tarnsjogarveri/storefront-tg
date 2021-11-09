@@ -1875,7 +1875,9 @@ $colors: (
 	padding: 0;
 }
 
-/*ul.products li.product, ul.products .wc-block-grid__product, .wc-block-grid__products li.product, */
+ul.products li.product, 
+ul.products .wc-block-grid__product, 
+.wc-block-grid__products li.product,
 .wc-block-grid__products .wc-block-grid__product {
 	margin-bottom: 0 !important;
 }
