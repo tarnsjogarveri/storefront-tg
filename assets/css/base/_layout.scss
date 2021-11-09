@@ -666,6 +666,10 @@ span.woocommerce-Price-amount.amount {
 		p {
 			padding: 0 ms(2);
 		}
+		.woocommerce-loop-product__title {
+			padding: 0;
+			font-size: 0.8rem;
+		}
 	}
 	.wp-block-column {
 		flex-basis: 100%!important;
@@ -715,7 +719,7 @@ span.woocommerce-Price-amount.amount {
 .col-full {
 	.footer-widgets,
 	.product {
-		padding: 0 1em;
+		padding: 0 0.5em;
 	}
 
 	.wp-block-cover {
