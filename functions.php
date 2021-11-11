@@ -251,3 +251,5 @@ function tg_gutenberg_color_palette() {
 		);
 }
 add_action( 'after_setup_theme', 'tg_gutenberg_color_palette');
+
+add_filter('woocommerce_reset_variations_link', '__return_empty_string');
