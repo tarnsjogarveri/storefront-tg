@@ -928,7 +928,7 @@ if ( ! function_exists( 'storefront_categroies_sub_menu' ) ) {
 				//print_r( $category );
 				
 				$url = get_term_link( (int)$category->term_id, "product_cat" ); /*Get url from numeric page id*/
-				$current = ( $id_current == $category->term_id ) ? 'aria-current=true' : ""; /*Set if the current category is selected, else blank*/
+				$current = ( $id_current == $category->term_id ) ? "aria-current=\"true\" " : ""; /*Set if the current category is selected, else blank*/
 				echo( '<li><a ' . $current . 'href="'. $url . '">' . $category->name . '</a>' );
 
 			}
@@ -944,7 +944,7 @@ if ( ! function_exists( 'storefront_categroies_sub_menu' ) ) {
 				echo ("</ul><hr><ul>"); //separete lists and divider line
 				foreach ( $sub_categories as $category ) {
 					$url = get_term_link( (int)$category->term_id, "product_cat" ); /*Get url from numeric page id*/
-					$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : ""; /*Set if the current category is selected, else blank*/
+					$current = ( $cat_req == $category->slug ) ? "aria-current=\"true\" " : ""; /*Set if the current category is selected, else blank*/
 					echo( '<li><a ' . $current . 'href="'. $url . '">' . $category->name . '</a>' );
 				}
 			}
