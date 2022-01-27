@@ -1745,6 +1745,12 @@ klarna-placement[data-key='credit-promotion-badge'] iframe {
 			letter-spacing: 0.3em;
 		}
 	}
+
+	hr {
+		margin: 0 auto;
+		background-color: $color_links;
+		width: 33%;
+	}
 }
 
 .woocommerce-products-header__title {

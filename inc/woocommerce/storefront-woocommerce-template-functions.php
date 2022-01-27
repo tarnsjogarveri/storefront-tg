@@ -912,26 +912,51 @@ if ( ! function_exists( 'storefront_categroies_sub_menu' ) ) {
 	 * @return void
 	 */
 	function storefront_categories_sub_menu() {
-		if( is_product_category() | is_shop() | is_product() ) {
+		if( is_product_category() | is_shop() | is_product() ) { // Check if it's a shopping page
 			$args = array(
 				'taxonomy'	=> "product_cat",
-				'hide_empty'	=> "true"
+				'hide_empty'	=> "true",
+				'parent' => "0"
 			);
-			$product_categories = get_terms($args);
+			$product_categories = get_terms($args); // Get the items in the top row
 
 			$cat_req = (isset(get_queried_object()->slug)) ? get_queried_object()->slug : "";
+			$id_current = (get_queried_object()->parent > 0) ? get_queried_object()->parent : get_queried_object()->term_id;
 
 			echo( '<div class="col-full"><nav class="storefront-category-sub"><ul>' );
 			foreach ( $product_categories as $category ) {
 				//print_r( $category );
 				
 				$url = get_term_link( (int)$category->term_id, "product_cat" ); /*Get url from numeric page id*/
-				$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : ""; /*Set if the current vategory is selected, else blank*/
+				$current = ( $id_current == $category->term_id ) ? 'aria-current=true' : ""; /*Set if the current category is selected, else blank*/
 				echo( '<li><a ' . $current . 'href="'. $url . '">' . $category->name . '</a>' );
+
+			}
+
+			$args = array(
+				'taxonomy'	=> "product_cat",
+				'hide_empty'	=> "true",
+				'parent' => $id_current
+			);
+			$sub_categories = get_terms($args); // Look for categories belonging to selected parent
+
+			if( $id_current > 0 && sizeof($sub_categories) > 0) { // If there is sub categories
+				echo ("</ul><hr><ul>"); //separete lists and divider line
+				foreach ( $sub_categories as $category ) {
+					$url = get_term_link( (int)$category->term_id, "product_cat" ); /*Get url from numeric page id*/
+					$current = ( $cat_req == $category->slug ) ? 'aria-current=true' : ""; /*Set if the current category is selected, else blank*/
+					echo( '<li><a ' . $current . 'href="'. $url . '">' . $category->name . '</a>' );
+				}
 			}
 			echo( '</ul></nav></div>' );
 			
+			//echo("<div>Current term id: ". $id_current ."</div>");
+			//echo("<div>Size of sub categories: ". sizeof($sub_categories) ."</div>");
+			//echo("<pre>");
 			//print_r($product_categories);
+			//print_r(get_queried_object());
+			//print_r($sub_categories);
+			//echo("</pre>");
 		}
 	}
 }
