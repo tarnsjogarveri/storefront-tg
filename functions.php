@@ -253,3 +253,15 @@ function tg_gutenberg_color_palette() {
 add_action( 'after_setup_theme', 'tg_gutenberg_color_palette');
 
 add_filter('woocommerce_reset_variations_link', '__return_empty_string');
+
+// Fix new weird classes added to column blocks
+// https://wordpress.org/support/topic/where-do-these-inline-css-wp-container-62-styles-come-from/
+remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
+
+add_filter( 'render_block', function( $block_content, $block ) {
+	if ( $block['blockName'] === 'core/group' | $block['blockName'] === 'core/columns' ) {
+		return $block_content;
+	}
+
+	return wp_render_layout_support_flag( $block_content, $block );
+}, 10, 2 );
