@@ -1826,19 +1826,20 @@ $colors: (
 			border-radius: 0;
 		}
 	}
+}
 
-	.tg-blocks-link__text {
-		.intro {
-			font-family: $header-font;
-		}
-		.title {
-			font-family: $link-block-title-font;
-		}
-		.description {
-			font-family: $base-font;
-		}
+.tg-blocks-multi-image__text,
+.tg-blocks-link-cover__text,
+.tg-blocks-link__text {
+	.intro {
+		font-family: $header-font;
 	}
-
+	.title {
+		font-family: $link-block-title-font;
+	}
+	.description {
+		font-family: $base-font;
+	}
 }
 
 .linkblock-title {
