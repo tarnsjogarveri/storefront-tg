@@ -265,3 +265,14 @@ add_filter( 'render_block', function( $block_content, $block ) {
 
 	return wp_render_layout_support_flag( $block_content, $block );
 }, 10, 2 );
+
+//set color for browser address bar on mobile / desktop PWA
+function tg_browser_theme_color() {
+	//$color = "#f9f5f1";
+	$color = "#78614f";
+	echo("<meta name=\"theme-color\" content=\"$color\"/>\n");
+	echo("<meta name=\"msapplication-TileColor\" content=\"$color\"/>\n");
+	echo("<meta name=\"msapplication-navbutton-color\" content=\"$color\"/>\n");
+	echo("<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"$color\"/>\n");
+}
+add_action("wp_head","tg_browser_theme_color");
