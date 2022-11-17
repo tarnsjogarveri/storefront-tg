@@ -1890,3 +1890,14 @@ ul.products .wc-block-grid__product,
 .wc-block-grid__products .wc-block-grid__product {
 	margin-bottom: 0 !important;
 }
+
+// cool timeline styling
+
+.wp-block-cp-timeline-content-timeline-block {
+	.position-right .story-time {
+		text-align: right;
+	}
+	.position-left .story-time {
+		text-align: left;
+	}
+}
