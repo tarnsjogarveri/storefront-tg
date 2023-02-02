@@ -276,3 +276,13 @@ function tg_browser_theme_color() {
 	echo("<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"$color\"/>\n");
 }
 add_action("wp_head","tg_browser_theme_color");
+
+//add 150 years image
+function tg_150years_header() {
+	echo("
+	<div class=\"tg150years\">
+		<img src=\"https://media.tarnsjogarveri.com/2023/01/TG_150_anniversary.svg\">
+	</div>
+	");
+}
+add_action( 'storefront_header', 'tg_150years_header', 15 );

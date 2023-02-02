@@ -354,6 +354,14 @@ body {
 	z-index: 99;
 }
 
+.tg150years {
+	float: right;
+
+	img {
+		max-height: 80px;
+	}
+}
+
 .site-branding {
 	float: left;
 	margin-bottom: 0;
@@ -1184,6 +1192,7 @@ button.menu-toggle {
 	padding: ms(-2) ms(-1) ms(-2) ms(5);
 	font-size: ms(-1);
 	max-width: $menu_button_max-width;
+	margin-top: 4em;
 
 	&:hover {
 		background-image: none;
@@ -1666,6 +1675,7 @@ nav {
 
 	&.header_top {
 		display: inline-block;
+		width: auto;
 		margin-left: $margin-h;
 		ul {
 			justify-content: left;

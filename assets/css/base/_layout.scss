@@ -40,17 +40,25 @@
 	.woocommerce-active {
 		.site-header {
 			.header_top {
-				@include span(first 3 of 12);
+				@include span(first 2 of 12);
 				margin-left: 0;
 			}
 
+			.tg150years {
+				@include span(2 of 12);
+
+				img {
+					max-height: 130px;
+				}
+			}
+
 			.site-branding {
-				@include span(6 of 12);
+				@include span(4 of 12);
 				clear: none;
 			}
 
 			.site-search {
-				@include span(2 of 12);
+				@include span(3 of 12);
 				clear: none;
 			}
 
